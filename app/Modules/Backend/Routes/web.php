@@ -175,6 +175,25 @@ Route::group([
 Route::group([
     'module' => 'Backend',
     'namespace' => $namespace,
+    'middleware' => ['web', 'auth', 'locale', 'chat_enable'],
+    'prefix' => admin_config('prefix')], function () {
+    Route::get('chat', 'ChatController@newChatView')->name('new-chat');
+    Route::get('socket', 'ChatController@socket');
+    Route::post('sendmessage', 'ChatController@sendMessage');
+    Route::get('writemessage', 'ChatController@writemessage');
+    Route::get('indexSendNotification', 'ChatController@indexSendNotification');
+    Route::post('/save-token', 'ChatController@saveToken')->name('save-token');
+    Route::post('/send-notification', 'ChatController@sendNotification')->name('send.notification');
+    Route::post('/send-notification-job', 'ChatController@sendNotificationJob')->name('send.notificationJob');
+    // Route::get('openai', [OpenAIController::class, 'view'])->name('openai_view');
+    // Route::post('openai', [OpenAIController::class, 'write'])->name('openai_write');
+    Route::get('openai-view', 'OpenAIController@view')->name('openai_view');
+    Route::post('openai', 'OpenAIController@write')->name('openai_write');
+});
+
+Route::group([
+    'module' => 'Backend',
+    'namespace' => $namespace,
     'middleware' => ['web', 'auth', 'locale', 'apartment_enable'],
     'prefix' => admin_config('prefix')], function () {
     Route::get('new-apartment', 'ApartmentController@newApartmentView')->name('new-apartment');

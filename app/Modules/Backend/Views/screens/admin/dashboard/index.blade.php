@@ -58,5 +58,14 @@
             </div>
         </div>
 
+        {{-- <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
+            <!--widgetTotalCommission-->
+            <div class="getWidget d-none"
+                 data-action="{{dashboard_url('get-widget')}}"
+                 data-widget="widgetPendingTask"
+                 data-id="{{$user_id}}">
+            </div>
+        </div> --}}
+
     </div>
 @stop

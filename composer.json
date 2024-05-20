@@ -13,7 +13,8 @@
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "gumlet/php-image-resize": "1.9.*",
-        "guzzlehttp/guzzle": "^7.0",
+        "guzzlehttp/guzzle": "^7.8",
+        "laravel-notification-channels/fcm": "^2.7",
         "laravel/framework": "^8.0",
         "laravel/socialite": "^5.1",
         "laravel/tinker": "^2.5",
@@ -24,6 +25,9 @@
         "nesbot/carbon": "*",
         "omnipay/paypal": "^3.0",
         "omnipay/stripe": "^3.1",
+        "openai-php/client": "^0.8.5",
+        "orhanerday/open-ai": "^5.1",
+        "predis/predis": "^2.2",
         "tormjens/eventy": "^0.7.0"
     },
     "require-dev": {

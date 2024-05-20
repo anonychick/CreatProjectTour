@@ -1,19 +1,24 @@
 <section class="hero-slider" style="min-height: 350px">
     @php
-        $slider = get_option('home_slider');
-        $galleries = [];
-        if(!empty($slider)){
-            $slider = explode(',', $slider);
-            if(!empty($slider)){
-                foreach($slider as $item){
-                    $url = get_attachment_url($item, [1920, 768]);
-                    if(!empty($url)){
-                        array_push($galleries, $url);
-                    }
-                }
-            }
-        }
+        $slider = get_option('home_slider');       
+        $galleries = ["	https://ibookings.org/storage/2021/01/30/slider03-1612013205-1920x768.JPG",
+                        "https://ibookings.org/storage/2021/01/30/slider04-1612013206-1920x768.JPG",
+                        "https://ibookings.org/storage/2021/01/30/slider02-1612013205-1920x768.JPG",
+                    ];
+        // if(!empty($slider)){
+        //     $slider = explode(',', $slider);
+        //     if(!empty($slider)){
+        //         foreach($slider as $item){
+        //             $url = get_attachment_url($item, [1920, 768]);
+        //             dd($url);
+        //             if(!empty($url)){
+        //                 array_push($galleries, $url);
+        //             }
+        //         }
+        //     }
+        // }
         $text_slider = get_translate(get_option('home_slider_text'));
+        // dd($galleries);
     @endphp
     <div class="container-fluid no-gutters p-0">
         @if(!empty($galleries))

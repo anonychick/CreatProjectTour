@@ -17,6 +17,10 @@ class User extends Authenticatable
 
     protected $guarded = ['password_origin'];
 
+	protected $fillable = [
+        'fcm_token'
+    ];
+
     /**
      * The attributes that should be hidden for arrays.
      *

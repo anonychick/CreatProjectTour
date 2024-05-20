@@ -66,6 +66,7 @@ class Kernel extends HttpKernel
         'locale' => \App\Http\Middleware\Locale::class,
         'hotel_enable' => \App\Http\Middleware\HotelEnable::class,
         'car_enable' => \App\Http\Middleware\CarEnable::class,
+        'chat_enable' => \App\Http\Middleware\ChatEnable::class,
         'apartment_enable' => \App\Http\Middleware\ApartmentEnable::class,
         'tour_enable' => \App\Http\Middleware\TourEnable::class,
         'space_enable' => \App\Http\Middleware\SpaceEnable::class,
